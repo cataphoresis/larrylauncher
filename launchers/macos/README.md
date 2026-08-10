@@ -1,3 +1,5 @@
 # macOS launcher
 
-The native macOS launcher and acceptance test are the next incremental release after Linux v0.2.0.
+This directory is reserved for a future native macOS launcher and acceptance
+test. The unified macOS bootstrap itself is already natively validated in
+`cataphoresis/larrybootstrap`; only standalone launcher packaging remains.
