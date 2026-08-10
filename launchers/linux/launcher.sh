@@ -3,7 +3,8 @@ set -Eeuo pipefail
 
 SCRIPT_DIR="${BASH_SOURCE[0]%/*}"
 [[ "$SCRIPT_DIR" == "${BASH_SOURCE[0]}" ]] && SCRIPT_DIR="."
-ROOT_DIR="$(cd "$SCRIPT_DIR/../.." && pwd)"
+ROOT_DIR="$SCRIPT_DIR"
+[[ -x "$ROOT_DIR/runtime/larrybootstrap/bootstrap.sh" ]] || ROOT_DIR="$(cd "$SCRIPT_DIR/../.." && pwd)"
 BOOTSTRAP="$ROOT_DIR/runtime/larrybootstrap/bootstrap.sh"
 REPORT_DIR="$ROOT_DIR/runtime/larrybootstrap/platforms/linux/reports"
 ACTION="menu"
